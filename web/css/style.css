@@ -1,0 +1,301 @@
+:root {
+  --dark1: #100e0a;
+  --dark2: #222223;
+  --yellow: #ffec35;
+  --white: #f1f1f1;
+}
+
+h1{
+  font-weight: 400;
+  margin: 0;
+  color: var(--white);
+  font-size: 100px;
+  text-align: center;
+}
+
+h2{
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0;
+}
+
+h3{
+  margin: 0;
+  font-size: 38px;
+  font-weight: 900;
+  margin-bottom: 15px;
+}
+
+body{
+  font-family: 'Oswald', sans-serif;
+  /* background-color: var(--dark1); */
+  animation: bg-color infinite 15s;
+}
+
+/* header */
+
+header{
+  background-color: var(--dark2);
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 18px;
+  padding: 38px;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo{
+  background-image: url(../image/favicon.png);
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+}
+
+nav {
+  display: flex;
+}
+
+nav ul {
+  margin: 0;
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+}
+
+nav ul li {
+  list-style: none;  
+  margin-right: 50px;
+}
+
+nav ul li form input{
+  border: none;
+  background: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.log {
+  display: flex;
+  align-items: center;
+}
+
+.log span{
+  color: var(--white);
+  padding: 0 19px;
+}
+
+.log form button{
+  background-color: var(--yellow);
+  color:var(--dark2);
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+/* home */
+
+.home{
+height: 100vh;
+}
+
+.home .img-bg{
+  height: 100vh;
+  background-image: url(../image/bg.png);
+}
+
+.home .img-bg .text{
+  display: flex;
+  flex-direction: column;
+  padding-top: 200px;
+  align-items: center;
+}
+
+.home .img-bg .text p{
+  color: var(--white);
+  width: 1000px;
+  text-align: center;
+}
+
+/* Connexion */
+
+.connexion{
+  height: 100vh;
+  background-image: url(../image/bg.png);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 200;
+}
+
+.connexion h1{
+  margin-top: 50px;
+}
+
+.interface-connexion{
+  background-color: var(--white);
+  width: 600px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.formConnexion, .formNewUser{
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"],select#valueArticle, .interface-connexion input[type="password"], .interface-connexion input[type="submit"],button#actionNew{
+  background-color: var(--dark2);
+  border: none;
+  padding: 8px;
+  color: var(--white);
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+input::placeholder{
+  color: rgb(93, 93, 93);
+}
+
+.interface-connexion input[type="submit"]{
+  background-color: var(--yellow);
+  color: var(--dark2);
+  cursor: pointer; 
+}
+
+form.formNewUser {display: none;}
+
+/* Listing */
+
+.listing-bg{
+  background-image: url(../image/bg.png);
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.item{
+  margin-top: 150px;
+}
+
+article{
+  margin: 25px 0;
+  background-color: var(--white);
+}
+
+article{
+  display: flex;
+  background-color:var(--white);
+  box-shadow: 5px 5px 26px 3px rgba(0,0,0,0.55);
+}
+
+.info-title {
+  width: 800px;
+  align-items: center;
+  display: flex;
+  margin-left: 40px;
+}
+
+/* .info-title h2{
+  font-size: 42px;
+  font-weight: 900;
+} */
+
+.info-item{
+  background-color: var(--dark2);
+  display: flex;
+  flex-direction: column;
+  padding: 18px;
+  width: 350px;
+}
+
+.info-item p{
+  color: var(--yellow);
+}
+
+.info-item span{
+  margin: 4px;
+  color: var(--white);
+}
+
+/* Admin */
+
+.admin{
+  background-image: url(../image/bg.png);
+  height: 100vh;
+  padding-top: 100px;
+  box-sizing: border-box;
+}
+
+.admin h1{
+  margin-top: 100px;
+}
+
+.all-management{
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.newitem{
+  background-color: var(--white);
+  padding: 50px 150px;
+  text-align: center;
+  box-shadow: 5px 5px 26px 3px rgba(0,0,0,0.55);
+}
+
+.newitem form{
+  display: flex;
+  flex-direction: column;
+}
+
+.newitem form input[type="submit"],.selection input[type="submit"]{
+  background-color: var(--yellow);
+  color: var(--dark2);
+  cursor: pointer; 
+  border: none;
+  padding: 8px;
+}
+
+.deleteitem{
+  padding: 50px 150px;
+  text-align: center;
+}
+
+.deleteitem h3{
+  color: var(--white);
+}
+
+.selection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+select#valueArticle {
+  margin-right: 20px;
+}
+
+@keyframes bg-color{
+  0% {
+    background-color: var(--dark1);
+  }
+
+  60%{
+    background-color: var(--dark1);
+  }
+
+  70%{
+    background-color: hsl(54, 100%, 5%);
+  }
+
+  100%{
+    background-color: var(--dark1);
+  }
+}
