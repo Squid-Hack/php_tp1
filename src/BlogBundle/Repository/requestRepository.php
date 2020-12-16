@@ -1,11 +1,11 @@
 <?php
 // Request traitement of article
 if (isset($_GET['title'])) {
-  $artTitle = $_GET['title'];
-  $artCategory = $_GET['category'];
-  $artContent = $_GET['content'];
-  $artDatCreate = date('Y-m-d');
-  $action->newArticle($artTitle,$artCategory,$artContent,$artDatCreate,$actualID);
+  $itemTitle = $_GET['title'];
+  $itemCategory = $_GET['category'];
+  $itemContent = $_GET['content'];
+  $itemCreated = date('Y-m-d');
+  $action->newArticle($itemTitle,$itemCategory,$itemContent,$itemCreated,$userID);
 } else if (isset($_GET['newNom'])) {
   $newNom = trim($_GET['newNom']);
   $newPrenom = trim($_GET['newPrenom']);
@@ -24,9 +24,3 @@ if (isset($_GET['title'])) {
   $dateMod = date('Y-m-d');
   $action->modifyArticle($valueMod, $champsModify, $champsValue,$dateMod);
 }
-
-// echo $artTitle;
-// echo $artCategory;
-// echo $artContent;
-// echo $artDatCreate;
-// echo $actualID;

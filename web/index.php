@@ -32,7 +32,7 @@ $stockUsers = $users->findAll();
 
 // Initialisation
 $identity = "Welcome ";
-$statut = "KO ";
+$co = "true";
 
 // User's test
 if ((isset($_SESSION['pseudo'])) && (isset($_SESSION['password']))) { 
@@ -41,9 +41,9 @@ if ((isset($_SESSION['pseudo'])) && (isset($_SESSION['password']))) {
     $actualPassword = $user->getUserMdp();
     
     if(($actualPseudo === $_SESSION['pseudo']) && ($actualPassword === $_SESSION['password'])) {
-      $actualID = $user->getUserID();
+      $userID = $user->getUserID();
       $identity = $identity.ucfirst($_SESSION['pseudo']);
-      $statut = "OK";
+      $co = "false";
     } 
   }
 }
@@ -111,8 +111,8 @@ class MainController {
     $this->activeUser = $userActive;
   }
 
-  public function newArticle($artTit,$artCat,$artCon,$artCre,$artUser) {
-    $newArticle = (new ArticleRepository())->newArticle($artTit,$artCat,$artCon,$artCre,$artUser);
+  public function newArticle($itemTitle,$itemCategory,$itemContent,$itemCreated,$userID) {
+    $newArticle = (new ArticleRepository())->newArticle($itemTitle,$itemCategory,$itemContent,$itemCreated,$userID);
   }
 
   public function deleteArticle($valueDelID,$valueDelDate) {
@@ -133,7 +133,7 @@ require_once __DIR__.'/../src/BlogBundle/Repository/requestRepository.php';
 
 
 // Switch on the data get in URL for the view
-if ($statut === "OK") {
+if ($co === "false") {
   $action->setUserActive($_SESSION['pseudo']);
   if ($_GET['page'] === 'admin') {
     $viewData = $action->adminAction();

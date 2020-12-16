@@ -86,12 +86,15 @@ nav ul li form input{
   padding: 0 19px;
 }
 
+button{
+  cursor: pointer;
+}
+
 .log form button{
   background-color: var(--yellow);
   color:var(--dark2);
   border: none;
   padding: 8px;
-  cursor: pointer;
 }
 
 /* home */
@@ -163,6 +166,12 @@ input::placeholder{
   background-color: var(--yellow);
   color: var(--dark2);
   cursor: pointer; 
+  transition: 0.4s;
+}
+
+input[type="submit"]:hover{
+  background-color: hsl(54, 100%, 8%);
+  color: var(--white);
 }
 
 form.formNewUser {display: none;}
@@ -281,6 +290,27 @@ article{
 
 select#valueArticle {
   margin-right: 20px;
+}
+
+/*404*/
+.notfound{
+  height: 100vh;
+  background-image: url(../image/bg.png);
+}
+
+.notfound div {
+  text-align-last: center;
+  padding-top: 200px;
+  font-size: 23px;
+}
+
+.notfound div h1{
+  font-size: 215px;
+}
+
+.notfound div span{
+  color: var(--white);
+  font-size: 30px;
 }
 
 @keyframes bg-color{

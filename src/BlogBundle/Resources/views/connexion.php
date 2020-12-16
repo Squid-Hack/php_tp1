@@ -19,7 +19,7 @@
                     <!-- <label for="">Mot de passe</label> -->
                     <input type="password" name="password" placeholder="Password">
                     <input type="hidden" name="page" value="accueil">
-                    <input type="submit" name="" id="" value="Send">
+                    <input type="submit" name="" value="Send">
             </form>
             <button id="actionNew">New user</button>
             <form class="formNewUser" action="index.php" method="get">

@@ -44,8 +44,8 @@ class ArticleRepository {
   //   $results->execute();
   // }
 
-  public function newArticle($newTit,$newCat,$newCon,$newCre,$newUser) {
-    $results = $this->_db->prepare("INSERT INTO `item`(`item_title`, `item_category`, `item_created`, `item_content`, `item_user`) VALUES ('$newTit','$newCat','$newCre','$newCon','$newUser')");
+  public function newArticle($newItemTitle,$newItemCategory,$newItemContent,$newitemCreated,$newIserID) {
+    $results = $this->_db->prepare("INSERT INTO `item`(`item_title`, `item_category`, `item_created`, `item_content`, `item_user`) VALUES ('$newItemTitle','$newItemCategory','$newitemCreated','$newItemContent','$newIserID')");
     $results->execute();
   }
 }
