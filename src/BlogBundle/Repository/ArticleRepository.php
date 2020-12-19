@@ -34,15 +34,9 @@ class ArticleRepository {
   }
 
   public function deleteArticle($valueDelID,$valueDelDate) {
-    // $results = $this->_db->prepare("UPDATE `item` SET `item_modified`= '$valueDelDate', `archive`= 'archive' WHERE `id` = '$valueDelID'");
     $results = $this->_db->prepare("UPDATE `item` SET `item_archive`= '1' WHERE `item_id` = '$valueDelID'");
     $results->execute();
   }
-
-  // public function modifyArticle($valueMod,$champsModify,$champsValue,$dateMod) {
-  //   $results = $this->_db->prepare("UPDATE `item` SET $champsModify = '$champsValue', `item_modified`= '$dateMod' WHERE `id` = '$valueMod'");
-  //   $results->execute();
-  // }
 
   public function newArticle($newItemTitle,$newItemCategory,$newItemContent,$newitemCreated,$newIserID) {
     $results = $this->_db->prepare("INSERT INTO `item`(`item_title`, `item_category`, `item_created`, `item_content`, `item_user`) VALUES ('$newItemTitle','$newItemCategory','$newitemCreated','$newItemContent','$newIserID')");
